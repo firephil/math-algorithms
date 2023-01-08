@@ -1,15 +1,11 @@
 import java.math.MathContext
 import scala.annotation.tailrec
 
-object Root {
-
-    def sqrt(n : Int) : BigDecimal = {
-  
+object Root :
+    def sqrt(n : Int) : BigDecimal =
         val root = JRoot.bigSqrt(new java.math.BigDecimal(n)) // JRoot implementation of good precision root
      
         return BigDecimal(root)
-    }
-}
 
 object FibClosedForm {
 
