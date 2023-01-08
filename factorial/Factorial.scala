@@ -25,7 +25,6 @@ object Factorial{
             
         aux(n,1)	   
         
-
     def functional(n : Int) :Int = (1 to n).reduce(_ * _)
  
     def functionalFoldLeft(n : Int) :Int = (1 to n).foldLeft(1)(_ * _)
@@ -49,17 +48,20 @@ object Factorial{
             res *= x 
             x += 1
         res
+    
+    def memoized (n:BigInt) : BigInt = ???
        
 }
 
 @main
 def run() =
+    val n = 10
     println("Factorial of 10")
-    println("Recursive: " + Factorial.recursive(10))
-    println("Tail Recursive: " + Factorial.tailRecursive(10))
-    println("Functional: " + Factorial.functional(10))
-    println("Functional Fold Left: " + Factorial.functionalFoldLeft(10))
-    println("Functional Fold Right: " + Factorial.functionalFoldRight(10))
-    println("Imperative: " + Factorial.imperative(10))
-    println("Tail Recursive Big: " + Factorial.tailRecBig(10))
-    println("Imperative Big: " + Factorial.imperativeBig(10))
+    println("Recursive: " + Factorial.recursive( n))
+    println("Tail Recursive: " + Factorial.tailRecursive(  n))
+    println("Functional: " + Factorial.functional(n))
+    println("Functional Fold Left: " + Factorial.functionalFoldLeft(n))
+    println("Functional Fold Right: " + Factorial.functionalFoldRight(n))
+    println("Imperative: " + Factorial.imperative(n))
+    println("Tail Recursive Big: " + Factorial.tailRecBig(n))
+    println("Imperative Big: " + Factorial.imperativeBig(n))
