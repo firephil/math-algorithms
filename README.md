@@ -1,1 +1,1 @@
-# math-algorithms
+# Math Algorithms in various programming languages
